@@ -1,0 +1,208 @@
+<!-- --- File: templates/index.html --- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujata's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <!-- Paste the Font Awesome link here -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+</head>
+<body>
+    <main>
+        <section id ="home"class="intro-section">
+            <h1>Sujata Kandel </h1>
+            <div class = "wrapper">
+            <div class="typing-text">
+                <h3>I'm a <span class="typing"></span></h3>
+                <ul>
+                    <li><span>Coder</span></li>
+                    <li><span>Web Developer</span></li>
+                    <li><span>Web Designer</span></li>
+                </ul>
+            </div>
+            </div>
+            
+        </section>
+
+    
+
+        <div class="homepage">
+            <nav class="site-nav">
+             <div class="nav-left">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- <div class="nav-right social-icons">
+                <a href="https://github.com/Sujata37" target="_blank">
+                    <i class="fab fa-github" style='font-size:30px'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sujata-kandel/" target="_blank">
+                    <i class="fab fa-linkedin" style='font-size:30px'></i>
+              </a>
+            </div> -->
+            </nav>
+        </div>
+        
+        
+            <section id="about" class="about-section">
+                <h2>About Me</h2>
+                <p>I love designing, I love coding. 
+                When I'm not coding, you can find me reading tech blogs or exploring new frameworks.
+                I am also interested in Data Analysis and have been learning tools like Pandas and Tableau.</p>
+            </section>
+
+            <section id="experience" class="experience-section">
+                <h2>Experience</h2>
+                <li>Front-End Developer (2020 - 2021)
+                    <ul>
+                        <li> Built responsive and interactive UI components using React.js, React Router, and CSS frameworks</li>
+                        <li>Collaborated with the design team to implement user-friendly interfaces.</li>
+                        <li>Developed features like dynamic routing, stateful forms, and real-time data display using APIs</li>
+                    </ul>
+                    <li> Freelance UI/UX & Content Designer (2021 - 2023)
+                    <ul>
+                        <li>Worked on developing a responsive web application using HTML, CSS, and JavaScript.</li>
+                        <li>Collaborated with the design team to implement user-friendly interfaces.</li>
+                        <li>Gained experience in version control using Git.</li>
+                    </ul>
+                    <li> Student Services Officer– Sydney City College of Management
+                    <ul>
+                        <li>Maintained accurate records and corporate documentation to ensure ongoing compliance with relevant regulations and 
+                            quality standards.</li>
+                        <li>Assisted in creating, reviewing, and maintaining reports, documents, and records as required.</li>
+                        <li>Managed training administration tasks such as setting up new courses, resource and assessment coordination, student 
+                            progression monitoring, and file maintenance and auditing.</li>
+                    </ul>
+            </section>
+
+            <section id="skills" class="skills-section">
+                <h2>Skills</h2>
+
+  <div class="skill-row">
+    <span class="skill-name">HTML, CSS, JS</span>
+    <div class="progress">
+      <div class="progress-bar" data-pct="70">
+        <span class="progress-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <span class="skill-name">Python</span>
+    <div class="progress">
+      <div class="progress-bar" data-pct="60">
+        <span class="progress-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <span class="skill-name">Flask</span>
+    <div class="progress">
+      <div class="progress-bar" data-pct="50">
+        <span class="progress-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <span class="skill-name">Figma</span>
+    <div class="progress">
+      <div class="progress-bar" data-pct="80">
+        <span class="progress-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <span class="skill-name">MS Office</span>
+    <div class="progress">
+      <div class="progress-bar" data-pct="80">
+        <span class="progress-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skill-row">
+    <span class="skill-name">SQL</span>
+    <div class="progress">
+      <div class="progress-bar" data-pct="60">
+        <span class="progress-text"></span>
+      </div>
+    </div>
+  </div>
+</section>
+            <section id="education" class="education-section">
+                <h2>Education</h2>
+                <div class="education-container">
+                <!-- <div class="education project-card"> -->
+                <div class="project-info">
+                    <h3>Bachelor's of Science, Computer Science and Information Technology</h3>
+                    <h4>Tribhuvan University- Kathmandu, Nepal</h4>
+                    <ul>
+                        <li>Relevant Coursework: Data Structures and Algorithms, Computer Networks, DBMS</li>
+                        <li>Activities: President of the Student Club, Volunteer for Tech Workshops</li>
+                    </ul>
+                </div>
+                </div>
+                <!-- <div class="education project-card"> -->
+                <div class="project-info">
+                    <h3>Master's Degree in Artificial Intelligence</h3>
+                    <h4>Brandenburg University of Technology- Cottbus</h4>
+                    <ul>
+                        <li>Relevant Coursework: Brain Computer Interfaces, Explainable Machine Learning, Causal Data Science</li>
+                        <li>Activities: Volunteer for coding Bootcamps, Volunteer for University Events</li>
+                        <li>2023 - Present</li>
+                    </ul>
+                </div>
+                </div>
+            </section>
+            <section id="projects" class="projects-section">
+                <h2>Projects</h2>
+                <div class="projects-container">
+                <!-- Placeholder for Project 1 -->
+                <div class="project-card">
+                    <h3>To-Do List App</h3>
+                    <img src="../static/images/to-do.png" alt="Image of a To-Do List App">
+                    <p>A simple yet functional To-Do list application built with HTML, CSS, and JavaScript.
+                         Features include adding, marking as complete, and deleting tasks. 
+                         This project helped me master DOM manipulation and local storage.</p>
+                    <a href=" https://sujata37.github.io/to-do-list-app/">View Live Demo</a> | <a href="https://github.com/Sujata37/to-do-list-app">GitHub Repo</a>
+                </div>
+
+                <!-- Placeholder for Project 2 -->
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <img src="../static/images/weather.png" alt="Image of a Weather Dashboard" height="200px" width="300px">
+                    <p>A weather application that fetches real-time data from a third-party API. Users can search for any city to get current weather conditions and a multi-day forecast. This project was key to learning API integration.</p>
+                    <a href="https://sujata37.github.io/weather-forcast/">View Live Demo</a> | <a href="https://github.com/Sujata37/weather-forcast">GitHub Repo</a>
+                </div>
+                
+                </div>
+            </section>
+            <section id="contact" class="contact-section">
+                <h2>Contact Me</h2>
+                <p>I'm open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <p>Email: <a href="mailto:sujatakandel25@gmail.com">sujatakandel25@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/sujatakandel">linkedin.com/in/sujatakandel</a></p>
+                <p>GitHub: <a href="https://github.com/sujatakandel">github.com/sujatakandel</a></p>
+            </div>
+            </section>
+        
+    
+        
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </main>
+</body>
+</html>

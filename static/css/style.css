@@ -1,0 +1,389 @@
+/* Import a beautiful font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Set up color variables for easy changes */
+:root {
+ /* --background-image: url('../images/background.jpeg');*/
+  --background-color: #302b2b; /* Dark background */
+  --text-color: #e0e0e0;
+  --accent-color: #366066; /* A vibrant teal */
+  --card-background: #1e1e1e;
+  --border-color: #333;
+  --link-hover-color: #ffffff;
+  --link-color: #0aa44f;
+}
+
+/* Apply the styles to the entire page (background of the page)*/
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #282727;
+  /* background-image: url('../images/background.jpeg'); */
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size:20px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+
+.intro-section{
+  padding: 2rem 0;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+section {
+  padding: 5rem 1rem;
+  /* background-color: var(--card-background); */
+  border-radius: 10px;
+  margin-bottom: 0.1rem;
+  box-shadow: 0 4px 12px rgba(37, 36, 36, 0.3);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  /* border-bottom: 3px solid var(--accent-color); */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2{
+  display: flex;             /* ← keeps the line on the same row as the title */
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2rem 0 1.25rem;    /* space below the title */
+  color: #fff;
+}
+
+h2::after {
+  content: "";
+  flex: 1;                   /* ← line fills the rest of the row */
+  height: 0.2rem;
+  background: var(--border-color);
+
+}
+
+p {
+  font-weight: 300;
+}
+
+.homepage { 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+/* navigation bar */
+.site-nav{
+  /* Sit in the flow after the hero, then stick to top when scrolled */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the link group */
+  gap: 10px;
+
+  width: 1000px; /* match main max-width for centered look */
+  max-width: calc(100% - 2rem);
+  margin-bottom: 3rem;
+  padding: 0.6rem 1rem;
+  backdrop-filter: blur(8px);
+  transition: box-shadow .2s ease, background .2s ease;
+
+}
+
+/* Add top padding to main equal to nav height (approx). Adjust if you change nav padding/size. */
+/* keep contents constrained to your main width */
+.site-nav > .nav-left {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 auto; /* push right group to the right */
+  align-items: center;
+}
+
+.site-nav > .nav-right {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* when nav is stuck at the top, add a subtle shadow */
+.site-nav.is-stuck{
+  background: #282727;
+  box-shadow: 0 10px 20px rgba(0, 15, 13, 0.25);
+}
+
+.site-nav a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  transition: color .2s, background .2s, transform .1s;
+}
+
+.site-nav a.active{
+  color:#ffffff;
+  background: rgba(255,255,255,.10);
+}
+
+.site-nav a:hover {
+  color: var(--link-hover-color);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15); /* subtle shadow on hover */
+}
+
+/* icons */
+.social-icons{ 
+  display:flex; 
+  align-items:center; 
+  gap:12px; 
+}
+
+.social-icons i { 
+  font-size: 1rem; 
+  line-height: 1; 
+}
+.social-icons a {
+   color: #fff;
+ }
+.social-icons a:hover { 
+  color: var(--link-hover-color);
+  transform: scale(1.1);}
+
+/* Smooth native scrolling + ensure anchors aren’t hidden under sticky nav */
+html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 90px; } /* tweak to your nav height */
+
+
+/* projects section styling */
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #272626;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.project-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+.contact-links a{
+  color: #0aa44f;
+  text-decoration: underline;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* (responsive navbar overrides removed to restore original layout) */
+
+
+
+
+.otherpage{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:30px;
+}
+
+/* Hide the original list of words */
+.typing-text ul {
+    display: none;
+}
+
+/* Style the dynamic text */
+.typing {
+    /* Use a monospace font for a clean, typewriter-like look */
+    font-family: monospace;
+    white-space: nowrap; /* Prevent the text from wrapping */
+    border-right: 2px solid #fff; /* This is the "cursor" */
+    animation: blink 0.7s step-end infinite; /* Cursor blink animation */
+}
+
+/* The blink animation for the cursor */
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+/* Optional: Add some basic styling for the container */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    height: 5vh; /* Adjust as needed */
+    flex-direction: column;
+}
+
+.typing-text h3 {
+    font-size: 35px;
+    /* color: #059e4a; */
+    color: #ffffff;
+}
+.typing-text h3 span {
+   
+  color: #0aa44f; /* Accent color for the dynamic part */
+}
+
+
+
+/* Progress Bar */
+
+.skill-row{
+  display: grid;
+  grid-template-columns: 220px 1fr;   /* label fixed, bar fills */
+  align-items: center;
+  gap: 1px;
+  margin: 15px 40px;
+  /* display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem; */
+}
+.skill-name {
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress{
+  height: 20px;
+  background: #a8a6a6;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+   background: var(--link-color);
+  height: 100%;
+  border-radius: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* put text at right end */
+  padding-right: 8px;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: width 1s ease-in-out;
+}
+
+.progress-text{
+  position:relative;
+}
+
+/* responsive label width */
+@media (max-width: 768px) {
+  .skill-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Skills progress bar styles */
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  width: 160px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.progress {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%; /* animated from 0 to target */
+  background: linear-gradient(90deg, var(--link-color), var(--accent-color));
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: #fff;
+  font-weight: 600;
+  transition: width 1.2s cubic-bezier(.22,.9,.32,1);
+}
+
+.progress-text {
+  display: none; /* hide numeric percentage inside the bar */
+}
+
+/* when animated, add an 'anim' class to fill to transition */
+/* JS will set the width inline on .progress-bar elements when animating */
